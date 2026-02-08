@@ -1,1 +1,10 @@
-export default { async fetch(request, env) { const url = new URL(request.url); if (url.pathname === "/api/bazaar") { const apiKey = env.CMC_API_KEY; if (!apiKey) { return new Response( JSON.stringify({ error: "API key missing" }), { status: 500, headers: { "Content-Type": "application/json" } } ); } return new Response( JSON.stringify({ status: "ok", message: "CMC Bazaar API connected", time: Date.now() }), { headers: { "Content-Type": "application/json" } } ); } return env.ASSETS.fetch(request); } };
+if (url.pathname === "/api/bazaar") {
+  return new Response(
+    JSON.stringify({
+      status: "ok",
+      source: "worker",
+      message: "Bazaar API reachable"
+    }),
+    { headers: { "Content-Type": "application/json" } }
+  );
+}
