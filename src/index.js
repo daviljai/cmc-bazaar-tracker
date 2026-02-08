@@ -1,0 +1,1 @@
+export default { fetch: async (request) => { return new Response('Hello from CMC Bazaar Tracker!', { status: 200 }); } };
