@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CMC Bazaar Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMC Bazaar Tracker</title>
 </head>
 <body>
-  <h1>CMC Bazaar Tracker</h1>
-  <pre id="output">Loading...</pre>
-
-  <script>
-    fetch("/api/bazaar")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("output").textContent =
-          JSON.stringify(data, null, 2);
-      });
-  </script>
+    <h1>Welcome to CMC Bazaar Tracker</h1>
+    <p>This is a public index page for the CMC Bazaar Tracker project.</p>
 </body>
 </html>
